@@ -39,10 +39,8 @@ $(document).ready(function() {
 
 	// Ask Question
 	$("#ask-question #submit-question").on('click', function() {
-		/*$("#ask-question input").val('');
-		questionPrevious();
-		toastr.success('Your Question has been posted', 'Success');*/
 		window.location.reload()
+		toastr.success('Question has been successfully posted', 'success');
 	});
 
 	// Chatroom

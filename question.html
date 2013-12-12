@@ -22,7 +22,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap_override.css">
     <script type="text/javascript" src="js/custom.js"></script>
 
-    <!-- Lightbox 2 -->
+    <!-- Fancybox -->
     <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" />
     <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
@@ -82,7 +82,7 @@
 
 		  			<p>I have multiple project source which I checkout from SVN and put in project one I want project two to point to specific part from these sources and project three to another part of the sources from this multiple project. How can I do that in eclipse ? So when I make a change in project two, when say SVN synchronize on project one to see that the sources have been changed. PS. I use gradle and for me it is much easier to build only one subproject, not the whole tree every time and ofcourse to see Eclipse Ctrl+space helps.</p>
 
-            <div id="codeblock-one" class="codeblock">
+            <a href="#content-block-one" class="fancybox"><div id="codeblock-one" class="codeblock">
 			  			<code class="prettyprint">
 			  				span.icon {<br />
 									height: 16px;<br />
@@ -92,7 +92,19 @@
 									left: -30px;<br />
 								}
 						  </code>
-		  			</div>
+		  			</div></a>
+
+            <div id="content-block-one" style="display: none">
+              <code class="prettyprint">
+                span.icon {<br />
+                  height: 16px;<br />
+                  width: 16px;<br />
+                  display: inline-block;<br />
+                  position: absolute;<br />
+                  left: -30px;<br />
+                }
+              </code>
+            </div>
 
 		  		</div>
 		  	</div>

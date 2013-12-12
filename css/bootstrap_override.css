@@ -1,0 +1,114 @@
+code {
+	background: transparent;
+}
+
+.glyphicon {
+	color: #FA6F57;
+}
+
+.input-group {
+	width: 359px;
+}
+
+nav a {
+	font-size: 16px;
+	color: #fff !important;
+}
+
+nav a:hover {
+	color: #fa6f57 !important;
+}
+
+@media (min-width: 768px) { 
+	nav a {
+		font-size: 16px;
+		color: #fff !important;
+	}
+
+	nav a:hover {
+		color: #fa6f57 !important;
+	}
+
+	nav a[data-toggle=dropdown]:hover {
+		color: #fff !important;
+	}
+
+	nav .navbar-nav>li>.dropdown-menu {
+		background: #fa6f57;
+		width: 170px;
+		margin-top: -3px;
+	}
+
+	nav .navbar-nav>li>.dropdown-menu>li>a {
+		color: rgb(31, 31, 31);
+		margin-top: 0 !important;
+		display: block;
+	}
+
+	nav .navbar-nav>li>.dropdown-menu>li>a:hover {
+		background: #342724;
+	}
+}
+
+/**
+*
+** Alerts
+*
+**/
+
+.container {
+	height: 1000px;
+}
+
+.alert-container {
+	position: relative;
+}
+
+.alert {
+	width: 400px;
+	top: 70px;
+	color: #fff;
+	position: fixed;
+	float: right;
+	left: 100%;
+}
+
+.alert a {
+	color: #fff !important;
+}
+
+.alert .close {
+	opacity: 1;
+	background: rgb(0, 0, 0);
+	padding: 2px;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+}
+
+.alert.alert-success {
+	background: #49a776;
+}
+
+.alert.alert-warning {
+	background: #ffb400;
+}
+
+.alert.alert-danger {
+	background: #fa6f57;
+}
+
+.alert.alert-info {
+	background: rgb(94, 91, 91);
+	border-color: rgb(60, 59, 59);
+}
+
+/**
+*
+** Progress bar
+*
+**/
+
+.progress > .progress-bar-default {
+	background: rgb(250, 111, 87);
+}

@@ -1,0 +1,317 @@
+<html>
+  <head>
+    <title>Dashboard | CodeIssues.co.uk</title>
+
+    <!-- General -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+
+    <!-- jQuery && jQuery UI -->
+    <script src="jquery/js/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="jquery/css/Aristo/Aristo.css" />
+    <script src="jquery/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+    <!-- Modals -->
+    <link rel="stylesheet" type="text/css" href="css/modals.css" />
+    <!-- // <script type="text/javascript" src="js/modals.js"></script> -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap_override.css">
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <!-- Lightbox 2 -->
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" />
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <!-- Font Awsome -->
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+
+    <!-- Chosen -->
+    <link rel="stylesheet" type="text/css" href="chosen/chosen.css">
+    <script type="text/javascript" src="chosen/chosen.jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.chosen-select').chosen({ "disable_search": true });
+        $('.chosen-select-100').chosen({ "disable_search": true, width: "100px" });
+      })
+    </script>
+
+    <!-- Navigation -->
+    <link rel="stylesheet" type="text/css" href="css/navigation.css">
+    <script type="text/javascript" src="js/navigation.js"></script>
+
+    <!-- Block -->
+    <link rel="stylesheet" type="text/css" href="css/block.css">
+    <script type="text/javascript" src="js/block.js"></script>
+
+    <!-- Prettify -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <!-- Toastr -->
+    <link href="toastr/toastr.css" rel="stylesheet"/>
+    <script src="toastr/toastr.js"></script>
+
+    <!-- jQuery Validate -->
+    <!-- <script type="text/javascript" src="validate/livevalidation_standalone.js"></script> -->
+
+    <!-- Functionality -->
+    <script src="js/functionality.js" type="text/javascript"></script>
+  </head>
+  <body> 
+    
+
+    <div class="pagewrap">
+      <div class="main-content">
+        <div class="dash-main">
+
+          <div class="block" id="user"> <!-- Profile block -->
+            <h2>User Profile</h2>
+            <select class="chosen-select-100">
+              <option>Profile</option>
+              <option>Bio</option>
+            </select>
+            
+            <div class="user-block profile">
+              <div class="content-box big">
+                <div class="user-image-wrapper">
+                  <div class="user-image"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/64677_570997489582486_1220468946_n.jpg" /></div>
+                </div>
+                <div class="user-profile-wrapper">
+                  <div class="user-profile" style="padding-left: 95px;">
+                    <h4>Ayce Allchorn <small>- ayceallchorn</small></h4>
+                    <h6>Web Developer <small>- Alpha Wave Media</small></h6>
+                    <p>18 Years Old | Male</p>
+                    <p><a href="#">@ayceallchorn</a></p>
+                  </div>
+                </div>
+              </div>
+              <div class="content-box small user-stats">
+                <div class="profile-level" title="User Level"><i class="fa fa-bar-chart-o"></i> 1</div>
+                <div class="profile-questions" title="Questions Asked"><i class="fa fa-edit"></i> 0</div>
+                <div class="profile-followers" title="Followers"><i class="fa fa-user"></i> 0</div>
+              </div>
+            </div>
+
+            <div class="user-block bio">
+              <div class="content-box big" style="padding: 10px;height: 160px;">
+                <p>18 Year old web developer.</p>
+              </div>
+            </div>
+          </div> <!-- End Profile block -->
+
+          <div class="block" id="ask-question" style="margin-bottom: 50px;"><!-- Ask Question Block -->
+            <a href="#"><h2>Ask a Question</h2></a>
+
+            <div class="partone">
+              <div class="content-box small">
+                <input type="text" placeholder="Title...">
+              </div>
+
+              <div class="content-box small">
+                <select multiple data-placeholder="Tags..." class="chosen-select">
+                    <option value="1">jQuery</option>
+                    <option value="2">JavaScript</option>
+                    <option value="3">DOM</option>
+                    <option value="4">AJAX</option>
+                    <option value="5">JSON</option>
+                    <option value="6">PHP</option>
+                    <option value="7">CSS3</option>
+                    <option value="8">HTML5</option>
+                    <option value="9">CSS</option>
+                    <option value="10">HTML</option>
+                </select>
+              </div>
+
+              <div class="content-box small" style="margin-top: 20px;">
+                <button onclick="questionNext()" class="btn btn-primary">Next</button>
+              </div>
+            </div>
+            <div class="parttwo">
+              <div class="content-box big">
+                <input type="hidden" id="code-one-value" />
+                <input type="hidden" id="code-two-value" />
+                <textarea placeholder="Ask Question"></textarea>
+              </div>
+              <div class="content-box small">
+                <button class="btn btn-default pull-left" id="codeblockone" data-toggle="modal" data-target="#myModal">+</button>
+
+                <button class="btn btn-primary alert-question" id="submit-question">Ask</button>
+                <button onclick="questionPrevious()" class="btn btn-default">Previous</button>
+              </div>
+            </div>
+          </div> <!-- End Ask Question block -->
+
+          <div class="block long" id="progress"> <!-- Start Progress -->
+            <h2>Progress</h2>
+            <ul>
+              <li>Ask 10 Questions (MK1)
+
+                <div class="progress">
+                  <div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                    <span class="sr-only">40% Complete (success)</span>
+                  </div>
+                </div>
+              </li>
+              <li>Answer 10 Questions (MK1)
+                <div class="progress">
+                  <div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                    <span class="sr-only">90% Complete (success)</span>
+                  </div>
+                </div>
+              </li>
+              <li>Achieve 10 Views on a single question (MK1)
+                <div class="progress">
+                  <div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 10%">
+                    <span class="sr-only">50% Complete (success)</span>
+                  </div>
+                </div>
+              </li>
+              <li>Visit the site 2 Consecutive days (MK1)
+                <div class="progress">
+                  <div class="progress-bar progress-bar-default" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                    <span class="sr-only">0% Complete (success)</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="block long" id="chatroom"> <!-- Start Chatroom -->
+            <h2><a href="#" style="color:#FA6F57;">HTML Chatroom</a></h2>
+            <div class="content-box big" style="height: 215px;overflow-y:scroll;overflow-x:hidden;">
+              <div class="post">
+                <span><a href="#" title="[Full name]">[Full name]</a></span>
+                <p>RANDOM TEXT</p>
+              </div>
+              <div class="post">
+                <span><a href="#" title="[Full name]">[Full name]</a></span>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+              </div>
+              <div class="post user">
+                <span><a href="#" title="Ayce Allchorn">Ayce Allchorn</a></span>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+              </div>
+            </div>
+            <div class="content-box small">
+              <form>
+                <input type="text" placeholder="Write Something...">
+                <button class="btn btn-primary">Post</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="block" id="locked">
+            <h2>Locked Block</h2>
+            <p><i class="fa fa-lock"></i></p>
+          </div>
+
+        </div> <!-- End Dash Main -->
+
+
+
+
+
+        <div class="dash-side"> <!-- Start dash side -->
+          <div class="block tabs" id="user-content">
+            <ul>
+              <li class="notification-tab-1 active" onclick="notificationTab(1)"><p>Questions</p></li>
+              <li class="notification-tab-2" onclick="notificationTab(2)"><p>Followers</p></li>
+              <li class="notification-tab-3" onclick="notificationTab(3)"><p>Following</p></li>
+            </ul>
+            <div class="part-1 show">
+              <a href="#"><div class="box">
+                <p>This is a question about jQuery and JavaScript</p>
+                <div class="tags">
+                  <span class="tag">jQuery</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <div class="stats pull-right">
+                  0 <span class="stats stat" title="Views"></span>
+                </div>
+              </div></a>
+            </div>
+            <div class="part-2">
+              <a href="#">
+                <div class="box">
+                  <img src="http://placehold.it/92x92" />
+                  <div class="info">
+                    <p>Random user <small>| user1</small></p>
+                    <p>Web Developer</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="part-3">
+              <a href="#">
+                <div class="box">
+                  <img src="http://placehold.it/92x92" />
+                  <div class="info">
+                    <p>Random user <small>| user1</small></p>
+                    <p>Web Developer</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="block long" id="notifications">
+            <h2>Notifications</h2>
+            <div class="container">
+              <p>You have no notifcations</p>
+            </div>
+            
+          </div>
+
+        </div>
+          
+
+
+          
+
+      </div>
+    </div>
+      
+
+
+  <!-- Modal(s) -->
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Enter code below</h4>
+        </div>
+        <div class="modal-body">
+          <textarea style="width:100%;height:400px;resize:none;"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="newCodeBlockOne()">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <div class="modal fade" id="myModalTwo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">Enter second code below</h4>
+        </div>
+        <div class="modal-body">
+          <textarea style="width:100%;height:400px;resize:none;"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="newCodeBlockTwo()">Save changes</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->
+
+  <!-- End Modal(s) -->
+  </body>
+</html>

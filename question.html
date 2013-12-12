@@ -1,0 +1,332 @@
+<html>
+  <head>
+    <title>Not Logged In | CodeIssues.co.uk</title>
+
+    <!-- General -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+
+    <!-- jQuery && jQuery UI -->
+    <script src="jquery/js/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="jquery/css/Aristo/Aristo.css" />
+    <script src="jquery/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+    <!-- Modals -->
+    <link rel="stylesheet" type="text/css" href="css/modals.css" />
+    <script type="text/javascript" src="js/modals.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap_override.css">
+    <script type="text/javascript" src="js/custom.js"></script>
+
+    <!-- Lightbox 2 -->
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" />
+    <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+    <!-- Font Awsome -->
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+
+    <!-- Chosen -->
+    <link rel="stylesheet" type="text/css" href="chosen/chosen.css">
+    <script type="text/javascript" src="chosen/chosen.jquery.js"></script>
+
+    <!-- Navigation -->
+    <link rel="stylesheet" type="text/css" href="css/navigation.css">
+    <script type="text/javascript" src="js/navigation.js"></script>
+
+    <!-- Block -->
+    <link rel="stylesheet" type="text/css" href="css/block.css">
+    <script type="text/javascript" src="js/block.js"></script>
+
+    <!-- Prettify -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+    <!-- Toastr -->
+    <link href="toastr/toastr.css" rel="stylesheet"/>
+    <script src="toastr/toastr.js"></script>
+
+    <!-- jQuery Validate -->
+    <script type="text/javascript" src="validate/livevalidation_standalone.js"></script>
+
+    <!-- Functionality -->
+    <script src="js/functionality.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+
+  	<div class="pagewrap">
+
+  		<div class="main">
+  			<div class="question-block">
+	  			<h2>How to create two projects in eclipse to point to one source folder</h2>
+
+	  			<div class="author">
+
+						  <div class="user-image"><img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-prn1/64677_570997489582486_1220468946_n.jpg" /></div>
+
+						  <div class="author-information">
+						  	<div class="tags">
+                  <span class="tag">java</span>
+                  <span class="tag">eclipse</span>
+                  <span class="tag">gradle</span>
+                  <span class="tag">svn</span>
+                </div>
+						  </div>
+
+	  			</div>
+
+		  		<div class="question">
+
+		  			<p>I have multiple project source which I checkout from SVN and put in project one I want project two to point to specific part from these sources and project three to another part of the sources from this multiple project. How can I do that in eclipse ? So when I make a change in project two, when say SVN synchronize on project one to see that the sources have been changed. PS. I use gradle and for me it is much easier to build only one subproject, not the whole tree every time and ofcourse to see Eclipse Ctrl+space helps.</p>
+
+            <div id="codeblock-one" class="codeblock">
+			  			<code class="prettyprint">
+			  				span.icon {<br />
+									height: 16px;<br />
+									width: 16px;<br />
+									display: inline-block;<br />
+									position: absolute;<br />
+									left: -30px;<br />
+								}
+						  </code>
+		  			</div>
+
+		  		</div>
+		  	</div>
+
+		  	<div class="answers">
+		  		<h2>Answers</h2>
+          <div class="answer top">
+            <div class="vote">
+              <ul>
+                <li><a><span class="glyphicon glyphicon-chevron-up"></span></a></li>
+                <li class="current">2</li>
+                <li><a><span class="glyphicon glyphicon-chevron-down"></span></a></li>
+              </ul>
+            </div>
+
+            <p>Go to your second project's properties, to Java Build Path, then to the Source tab, and click on Link Source... button. There, click on Browse... button and select the src folder of your first project. This will allow you to change the source files from either project, and compile them from either project as well.</p>
+            <span>Anonymous | 28/11/2013 12:30</span>
+          </div>
+
+          <div class="answer">
+            <div class="vote">
+              <ul>
+                <li><a><span class="glyphicon glyphicon-chevron-up"></span></a></li>
+                <li class="current">0</li>
+                <li><a><span class="glyphicon glyphicon-chevron-down"></span></a></li>
+              </ul>
+            </div>
+
+            <p>Right click on project two, and left click on Properties.<br />
+            Check the class folder (bin) from project one. Left click on OK.<br />
+            Back on the Java Build Path dialog, left click on OK.</p>
+            <span>Anonymous | 28/11/2013 12:39</span>
+          </div>
+		  	</div>
+
+        <div class="write-answer">
+          <h2>Write an answer</h2>
+          <form>
+            <textarea placeholder="Write your answer here..."></textarea>
+          </form>
+          <button class="btn btn-primary btn-width-full" data-toggle="modal" data-target="#myModal">Post Your Answer</button>
+        </div>
+
+  		</div>
+
+  		<div class="sidebar">
+  			<div class="block" id="login">
+  				<h2>User Login</h2>
+  				<button id="register" data-toggle="modal" data-target="#RegisterModal">Register</button>
+
+  				<form>
+  					<input type="text" placeholder="Username" id="username" />
+  					<input type="password" placeholder="Password" id="password" />
+  					<a href="#" id="forgot">Lost Your Password?</a>
+  					<input type="submit" value="Sign In" />
+  				</form>
+  			</div>
+
+        <div class="block" id="information" style="margin-top:10px;">
+          <h2>Information</h2>
+          <p title="Author"><i class="fa fa-user"></i> Ayce Allchorn</p>
+          <p title="Followers"><i class="fa fa-users"></i>  0</p>
+          <p title="Level"><i class="fa fa-bar-chart-o"></i>  1</p>
+          <br />
+          <p title="Date"><i class="fa fa-calendar-o"></i>  Thu 28/11/2013 12:10</p>
+          <p title="Views"><i class="fa fa-eye"></i>  10</p>
+          <p title="Likes"><i class="fa fa-check"></i>  2</p>
+
+          
+        </div>
+  		</div>
+
+  	</div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Continue as 'Anonymous'?</h4>
+          </div>
+          <div class="modal-body">
+            To continue your post click 'continue'. <br /> WARNING: You will not gain any progress points by posting answers through Anonymous
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Login</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="post">Save changes</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+    <!-- Registration Model -->
+    <div class="modal fade" id="RegisterModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Register User</h4>
+          </div>
+          <div class="modal-body">
+            <ul class="nav nav-pills nav-stacked">
+              <li class="active"><a data-toggle="tab" href="#general"><i class="fa fa-book"></i> General</a></li>
+              <li><a data-toggle="tab" href="#location"><i class="fa fa-map-marker"></i> Location</a></li>
+              <li><a data-toggle="tab" href="#job"><i class="fa fa-suitcase"></i> Occupation</a></li>
+              <li><a data-toggle="tab" href="#bio"><i class="fa fa-bullhorn"></i> Bio</a></li>
+              <li><a data-toggle="tab" href="#social"><i class="fa fa-desktop"></i> Social Media</a></li>
+              <li><a data-toggle="tab" href="#reg-password"><i class="fa fa-lock"></i> Password</a></li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane active" id="general">
+                <form role="form">
+                  <div class="form-group">
+                    <label for="new-username">Choose a username</label>
+                    <input type="text" class="form-control" id="new-username" name="new-password" />
+                  </div>
+                  <div class="form-group">
+                    <label for="new-fullname">full Name</label>
+                    <input type="text" class="form-control" id="new-fullname" />
+                  </div>
+                  <div class="form-group">
+                    <label for="new-email">Choose an email address</label>
+                    <input type="text" class="form-control" id="new-email" />
+                  </div>
+                  <div class="DOB">
+                    <label for="new-DOB">Date of Birth</label><br />
+                    <select class="chosen-select" id="DOB_day" data-placeholder="Day">
+                      <option></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                    <select class="chosen-select" id="DOB_month" data-placeholder="Month">
+                      <option></option>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                    </select>
+                    <select class="chosen-select" id="DOB_year" data-placeholder="Year">
+                      <option></option>
+                      <option>1000</option>
+                      <option>2000</option>
+                      <option>3000</option>
+                    </select>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="gender" id="gender1" value="option1" checked>
+                      Male
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="gender" id="gender2" value="option2">
+                      Female
+                    </label>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane" id="location">
+                <p>Select your location from the dropdown below</p>
+                <script type="text/javascript">
+                  $(document).ready(function() {
+                    $(".chosen-select").chosen({
+                      disable_search_threshold: 10,
+                      width: "95%"
+                    });
+                  })
+                </script>
+                <select data-placeholder="Choose a country..." style="width:350px;" class="chosen-select">
+                  <option>UK</option>
+                  <option>USA</option>
+                  <option>India</option>
+                </select>
+              </div>
+              <div class="tab-pane" id="job">
+                <div class="form-group">
+                  <label for="new-company">Current Company</label>
+                  <input type="text" class="form-control" id="new-company">
+                </div>
+                <div class="form-group">
+                  <label for="new-job-role">Current Job role</label>
+                  <input type="text" class="form-control" id="new-job-role">
+                </div>
+              </div>
+              <div class="tab-pane" id="bio">
+                <div class="form-group">
+                  <label for="new-bio">Write a bio</label>
+                  <textarea class="form-control" id="new-bio" rows="10"></textarea>
+                </div>
+              </div>
+              <div class="tab-pane" id="social">
+                <div class="form-group">
+                  <label for="new-twitter">Twitter Username</label>
+                    <div class="input-group">
+                      <span class="input-group-addon">@</span>
+                      <input type="text" class="form-control" id="new-twitter">
+                    </div>
+                </div>
+              </div>
+              <div class="tab-pane" id="reg-password">
+                <div class="form-group">
+                    <label for="new-password">Choose a password</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                      <input type="password" class="form-control" id="new-password">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="new-confirm-password">Confirm Password</label>
+                    <div class="input-group">
+                      <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                      <input type="password" class="form-control" id="new-confirm-password">
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" disabled id="reg-prev" class="btn btn-default">Previous</button>
+            <button type="button" id="reg-next" class="btn btn-primary">Next</button>
+            <button type="button" id="reg-submit" class="btn btn-primary hidden" data-dismiss="modal">Submit</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
+
+
+  </body>
+
+</html>

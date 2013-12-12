@@ -1,0 +1,259 @@
+body {
+  background: #efeff0;
+  font-family: "Myriad Pro";
+  margin: 0;
+}
+
+nav {
+  max-height: 30px;
+  margin: 0;
+}
+
+nav i {
+  width: 20px;
+  font-size: 20px;
+}
+
+nav .navbar-header a {
+  width: 30px;
+  margin-left: 20px;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+nav .navbar-header a i {
+  font-size: 25px;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+nav .tooltip {
+  top: 50px !important;
+}
+
+nav .dropdown {
+  width: 170px;
+}
+
+nav > .dropdown-menu > i {
+  width: 25px;
+  font-size: 16px;
+  text-align: center;
+}
+
+nav .level-container {
+  height: 70px;
+  background: #1f1f1f;
+  padding-top: 10px;
+  border-bottom: 2px solid black;
+}
+
+nav .level {
+  margin: 0 auto;
+  width: 500px;
+}
+
+nav .level h2 {
+  display: inline-block;
+  color: #fa6f57;
+  margin: 0 8px;
+  position: relative;
+}
+
+nav .level .nav-progress-bar {
+  width: 300px;
+  background: #dcdcdd;
+  height: 30px;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 9999px;
+}
+
+nav .level .nav-progress-bar div {
+  background: #fa6f57;
+  height: 30px;
+  border-radius: 9999px;
+  
+ background-image: linear-gradient(135deg,#fa6f57 25%,#AD4D3C 25%,#AD4D3C 50%, #fa6f57 50%, #fa6f57 75%,#AD4D3C 75%,#0AD4D3C00 100%);
+            background-image: -moz-linear-gradient(135deg,#fa6f57 25%,#AD4D3C 25%,#AD4D3C 50%, #fa6f57 50%, #fa6f57 75%,#AD4D3C 75%,#AD4D3C 100%);
+            background-image: -ms-linear-gradient(135deg,#fa6f57 25%,#AD4D3C 25%,#AD4D3C 50%, #fa6f57 50%, #fa6f57 75%,#AD4D3C 75%,#AD4D3C 100%);
+            background-image: -o-linear-gradient(135deg,#fa6f57 25%,#AD4D3C 25%,#AD4D3C 50%, #fa6f57 50%, #fa6f57 75%,#AD4D3C 75%,#AD4D3C 100%);
+            background-image: -webkit-gradient(linear, 100% 100%, 0 0,color-stop(.25, #AD4D3C), color-stop(.25, #fa6f57),color-stop(.5, #fa6f57),color-stop(.5, #AD4D3C),color-stop(.75, #AD4D3C),color-stop(.75, #fa6f57),color-stop(1, #fa6f57));
+            background-image: -webkit-linear-gradient(135deg,#fa6f57 25%,#AD4D3C 25%,#AD4D3C 50%, #fa6f57 50%, #fa6f57 75%,#AD4D3C 75%,#AD4D3C 100%);
+            background-size: 40px 40px;
+  
+  transition: width 2s ease;
+  -moz-transition: width 2s ease;
+  -webkit-transition: width 2s ease;
+  -o-transition: width 2s ease;
+  -ms-transition: width 2s ease;
+  
+  animation: bganim 3s linear 2s infinite;
+            -moz-animation: bganim 3s linear 2s infinite;
+            -webkit-animation: bganim 3s linear 2s infinite;
+            -o-animation: bganim 3s linear 2s infinite;
+            -ms-animation: bganim 3s linear 2s infinite;
+}
+
+@keyframes bganim {
+        from {background-position:0;} to { background-position:40px;}
+        }
+        @-moz-keyframes bganim {
+        from {background-position:0;} to { background-position:40px;}
+        }
+        @-webkit-keyframes bganim {
+        from {background-position:0;} to { background-position:40px;}
+        }
+        @-o-keyframes bganim {
+        from {background-position:0;} to { background-position:40px;}
+        } 
+        @-ms-keyframes bganim {
+        from {background-position:0;} to { background-position:40px;}
+  
+        } 
+
+.level .nav-progress-bar > div a {
+  font-size: 26px;
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  margin-top: 0;
+  margin-left: 100px;
+  color: #fff;
+  font-weight: bold;
+  
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+nav .main-nav {
+  height: 50px;
+  background: #1f1f1f;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-fixed {
+  position: fixed;
+  top: 0;
+}
+
+nav .main-nav ul {
+  float: left;
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  padding: 0;
+}
+nav .main-nav ul li {
+  float: left;
+  margin-left: 20px;
+  position: relative;
+}
+
+nav .main-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+nav .main-nav ul li a:hover {
+  color: #fa6f57;
+}
+
+.content {
+  height: 2000px;
+  padding: 50px;
+}
+
+ul.dropdown {
+  left: -9999px;
+  margin-top: 15px;
+  display: block;
+  width: 200px !important;
+  background: rgb(250, 111, 87);
+  padding: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+ul li:hover ul {
+  left: 0;
+  position: relative;
+}
+
+.main-nav li:hover ul li a:hover {
+  color: black;
+}
+
+nav .main-nav ul li.right {
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+nav .main-nav ul li.right a {
+  position: relative;
+  top: -17px;
+}
+
+nav .main-nav ul li.right ul a {
+  top: 0; 
+}
+
+nav .main-nav ul li.right a:hover {
+  color: #fff;
+}
+
+nav .main-nav ul li.right ul a:hover {
+  color: #000;
+}
+
+nav .main-nav ul li.right img {
+  height: 30px;
+  width: 30px;
+  top: 10px;
+  margin-right: 10px;
+  border: 2px solid #000;
+  position: relative;
+}
+
+ul.profile-dropdown {
+  background: #fa6f57;
+  width: 175px !important;
+  position: relative;
+  left: -225px;
+  margin-top: -6px;
+}
+
+
+
+
+
+
+.click-nav ul li ul.profile-dropdown {
+  position:absolute;
+  left: -48px;
+  right: 0;
+  padding:0 10px;
+}
+
+.click-nav ul li ul.profile-dropdown li {
+  float: none;
+  padding: 10px 0 10px 40px;
+  margin:0;
+}
+
+/* Fallbacks */
+.click-nav .no-js ul {display:none;}
+.click-nav .no-js:hover ul {display:block;}

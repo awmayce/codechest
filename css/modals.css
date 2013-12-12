@@ -1,0 +1,40 @@
+/*Registrarion*/
+#RegisterModal .modal-body {
+	height: 330px;
+}
+
+#RegisterModal ul.nav {
+	width: 150px;
+	float: left;
+}
+
+#RegisterModal ul.nav i {
+	width: 25px;
+}
+
+#RegisterModal ul.nav li a {
+	color: #000;
+}
+
+#RegisterModal ul.nav li.active a {
+	color: #fff;
+	background-color: #fa6f57;
+}
+
+#RegisterModal .tab-content {
+	float: left;
+	margin-left: 10px;
+}
+
+#RegisterModal .tab-content {
+	width: 350px;
+}
+
+#RegisterModal .LV_validation_message {
+	display: none;
+}
+
+#RegisterModal .DOB .chosen-container {
+	width: 100px !important;
+	margin-bottom: 20px;
+}

@@ -1,0 +1,144 @@
+span.icon {
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	left: -30px;
+	background-repeat: no-repeat;
+}
+
+span.stat {
+	height: 16px;
+	width: 16px;
+	display: inline-block;
+	position: relative;
+	top: 3px;
+	background-repeat: no-repeat;
+	margin-right: 5px;
+}
+
+span.notification {
+	padding: 1px 4px;
+	border-radius: 9999px;
+	border: 1px solid rgb(255, 255, 255);
+	font-size: 10px;
+	color: rgb(255, 255, 255);
+	background: rgb(250, 111, 87);
+	position: absolute;
+	margin-top: -5px;
+	margin-left: 3px;
+}
+
+/*
+*
+** Icons
+*
+*/
+
+span.icon.user {
+	background: url("../images/icons/user-orange.png") no-repeat;
+}
+
+span.icon.date {
+	background: url("../images/icons/date.png") no-repeat;
+}
+
+span.icon.views {
+	background: url("../images/icons/views.png") no-repeat;
+}
+
+span.icon.tick {
+	background: url("../images/icons/tick.png") no-repeat;
+}
+
+span.icon.settings {
+	background: url("../images/icons/settings.png") no-repeat;
+}
+
+span.icon.logout {
+	background: url("../images/icons/logout.png") no-repeat;
+}
+
+span.icon.user.black {
+	background: url("../images/icons/user-black.png") no-repeat !important;
+}
+
+span.icon.settings.black {
+	background: url("../images/icons/settings-black.png") no-repeat !important;
+}
+
+span.icon.logout.black {
+	background: url("../images/icons/logout-black.png") no-repeat !important;
+}
+
+/*
+*
+** Stats
+*
+*/
+
+span.stat.stats {
+	background: url("../images/icons/stats.png") no-repeat;
+}
+
+span.stat.followers {
+	background: url("../images/icons/followers.png") no-repeat;
+}
+
+span.stat.questions-asked {
+	background: url("../images/icons/compose.png") no-repeat;
+}
+
+span.stat.user {
+	background: url("../images/icons/user-orange.png") no-repeat;
+}
+
+/*
+*
+** Buttons
+*
+*/
+
+button.btn {
+	outline: 0;
+	margin: 2px;
+}
+
+button.btn-width-full {
+	width: 100%;
+}
+
+button.btn.btn-primary {
+	background: #fa6f57;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	outline: 0;
+	cursor: pointer;
+}
+
+button.btn.btn-default {
+	background: #1f1f1f;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	outline: 0;
+	cursor: pointer;
+}
+
+/*
+*
+** Tags
+*
+*/
+
+.tags {
+	padding: 5px;
+}
+
+.tags .tag {
+	padding: 4px;
+	padding-right: 6px;
+	background: #FA6F57;
+	color: #FFF;
+	font-size: 10px;
+}
